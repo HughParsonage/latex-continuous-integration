@@ -24,3 +24,10 @@ before_archive:
     cp -f *.pdf shippable/;
 
 archive: true
+
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - hugh.parsonage@gmail.com
