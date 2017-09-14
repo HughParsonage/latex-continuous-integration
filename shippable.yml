@@ -14,7 +14,6 @@ before_script:
         echo "Couldn't retrieve the texlive package list!"
 
 script:
-  - latex -halt-on-error -interaction nonstopmode small2e
   - pdflatex -halt-on-error -interaction nonstopmode small2e
 
 before_archive:
