@@ -1,19 +1,13 @@
 language: generic
+sudo: true
 
-###############################################################################
-install:
-  - travis_retry wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu
-  - chmod +x ./install-tl-ubuntu
-  - sudo ./install-tl-ubuntu
-  - export PATH="/opt/texbin:$PATH"
-
-###############################################################################
-before_script:
-  # Check texlive version
-  - tlmgr version -v
-  # Check which tex packages we have available
-  - tlmgr info --only-installed ||
-        echo "Couldn't retrieve the texlive package list!"
+services:
+  - docker
+ 
+ 
+before_install:
+- docker pull sumdoc/texlive-2017
+- docker run -it -v /c/Users/username/Folder_with_tex:/home suman12029/texlive-2017 bin/bash
 
 ###############################################################################
 script:
