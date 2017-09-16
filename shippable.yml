@@ -1,4 +1,4 @@
-build_image: harshjv/texlive-2015
+build_image: sumdoc/texlive-2017
 
 install:
   # Check texlive version
