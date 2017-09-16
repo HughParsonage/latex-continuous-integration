@@ -7,7 +7,7 @@ services:
  
 before_install:
 - docker pull sumdoc/texlive-2017
-- docker run -it -v /c/Users/username/Folder_with_tex:/home suman12029/texlive-2017 bin/bash
+- docker run -it -v /c/Users/username/Folder_with_tex:/home sumandoc/texlive-2017 bin/bash
 
 ###############################################################################
 script:
